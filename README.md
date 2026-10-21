@@ -5,32 +5,62 @@ Advantech Data Connect (ADC) libraries, examples and documents for accessing COD
 ## Contents
 
 ```text
-Codesys_Project/
-  example.project
-  example_linux.project
-docs/
-Windows/examples/
-  CPlusPlus/
-  CSharp_net8/
-  Python/
-    Example1_async.py
-    Example2_local.py
-    Example3_sync.py
-    Example4_sync_struct.py
-    advantech_adc/library/{x86,x64}/
-Linux/
-  examples/
-    CPlusPlus/
-    Python/
-      Example1_async.py
-      Example2_local.py
-      Example3_sync.py
-      Example4_sync_struct.py
-      advantech_adc/
-  library/
-    x86/
-    x64/
-    arm64/
+Codesys_ADC/
+├── README.md
+├── LICENSE
+├── Codesys_Project/
+│   ├── example.project
+│   └── example_linux.project
+├── docs/
+│   ├── AdvantechDataConnectClassLibrary.pdf
+│   ├── AdvantechDataConnectLibrary.pdf
+│   └── AdvantechDataConnectLibrary(Linux).pdf
+├── Windows/
+│   └── examples/
+│       ├── CPlusPlus/
+│       ├── CSharp_net8/
+│       └── Python/
+│           ├── Example1_async.py
+│           ├── Example2_local.py
+│           ├── Example3_sync.py
+│           ├── Example4_sync_struct.py
+│           ├── _common.py
+│           └── advantech_adc/
+│               ├── ADCAPI.py
+│               ├── ADCDef.py
+│               ├── ADCType.py
+│               ├── __init__.py
+│               ├── _version.py
+│               └── library/
+│                   ├── x86/
+│                   │   └── AdvHandler.dll
+│                   └── x64/
+│                       └── AdvHandler.dll
+└── Linux/
+    ├── examples/
+    │   ├── CPlusPlus/
+    │   └── Python/
+    │       ├── Example1_async.py
+    │       ├── Example2_local.py
+    │       ├── Example3_sync.py
+    │       ├── Example4_sync_struct.py
+    │       ├── _common.py
+    │       └── advantech_adc/
+    │           ├── ADCAPI.py
+    │           ├── ADCDef.py
+    │           ├── ADCType.py
+    │           ├── __init__.py
+    │           └── _version.py
+    └── library/
+        ├── x86/
+        │   ├── libADCLibrary-x86.so
+        │   └── libCmpPLCHandler-x86.so
+        ├── x64/
+        │   ├── libADCLibrary-x64.so
+        │   └── libCmpPLCHandler-x64.so
+        └── arm64/
+            ├── libADCLibrary-arm64.so
+            └── libCmpPLCHandler-arm64.so
 ```
 
 Windows provides C++, .NET 8 C# and Python examples. Both platforms' Python examples, helper files and runtime modules come from `ADCLibrary/ADCPython` in the Windows ADC source. Keep the four example scripts, `_common.py` and `advantech_adc/` together directly in each `examples/Python/` directory. Python 3.7 or later is required; the local runtime uses the standard library and does not require installation from PyPI.

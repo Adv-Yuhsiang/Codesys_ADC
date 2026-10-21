@@ -15,6 +15,11 @@ __pycache__/
 *.exe
 ExampleApp[1-4]
 
+# CODESYS PLC connection certificates and PLCHandler logs (any directory)
+.pki/
+cert/
+PLCHandler*.log
+
 # Native .dll/.lib/.so distribution assets are intentionally tracked.
 # Development automation, source caches and build logs belong in adc-development.
 /.adc-work/
