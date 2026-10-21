@@ -35,7 +35,7 @@ Linux/
 
 Windows provides C++, .NET 8 C# and Python examples. Both platforms' Python examples, helper files and runtime modules come from `ADCLibrary/ADCPython` in the Windows ADC source. Keep the four example scripts, `_common.py` and `advantech_adc/` together directly in each `examples/Python/` directory. Python 3.7 or later is required; the local runtime uses the standard library and does not require installation from PyPI.
 
-`sync-manifest.json` is a release inventory: the publication script verifies its source commits, versions, file list and SHA256 checksums before upload. It supports release traceability and is not read by the example programs. Configure the examples for your target PLC before running them.
+Configure the examples for your target PLC before running them.
 
 ## Windows
 

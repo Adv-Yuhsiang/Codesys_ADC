@@ -24,3 +24,4 @@ ExampleApp[1-4]
 /scripts/
 /sync-adc.bat
 /publish-adc.bat
+/sync-manifest.json
