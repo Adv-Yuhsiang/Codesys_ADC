@@ -1,0 +1,2 @@
+# Preserve exact distribution bytes so manifest hashes survive GitHub uploads/clones.
+* -text

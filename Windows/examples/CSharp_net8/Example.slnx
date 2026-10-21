@@ -1,0 +1,32 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+	<Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  <Project Path="Example1/Example1.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="Example2/Example2.csproj" Id="2f4893cc-56f4-427b-b22f-954ca75f39b7">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="Example3/Example3.csproj" Id="db9b7522-1d1d-4b9c-9d81-91a99e5e1ed6">
+    <Platform Solution="*|x86" Project="x86" />
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="Example4_2/Example4_2.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="Example4/Example4.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+  <Project Path="Example5/Example5.csproj" Id="25d75511-9da9-4dda-8b47-96dd3b253e4b">
+    <Platform Solution="*|x64" Project="x64" />
+    <Platform Solution="*|x86" Project="x86" />
+  </Project>
+</Solution>
