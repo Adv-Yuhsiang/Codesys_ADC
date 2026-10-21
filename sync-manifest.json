@@ -14,36 +14,6 @@
                                             "productVersion":  null
                                         },
                                         {
-                                            "path":  "Windows/examples/CSharp/Debug/ADCClassLibrary.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0.0"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/CSharp/Debug/AdvHandler.dll",
-                                            "fileVersion":  null,
-                                            "productVersion":  null
-                                        },
-                                        {
-                                            "path":  "Windows/examples/CSharp/library/ADCClassLibrary.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0.0"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/CSharp/library/AdvHandler.dll",
-                                            "fileVersion":  null,
-                                            "productVersion":  null
-                                        },
-                                        {
-                                            "path":  "Windows/examples/CSharp/Release/ADCClassLibrary.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0.0"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/CSharp/Release/AdvHandler.dll",
-                                            "fileVersion":  null,
-                                            "productVersion":  null
-                                        },
-                                        {
                                             "path":  "Windows/examples/CSharp_net8/library/x64/ADCClassLibrary.dll",
                                             "fileVersion":  "1.0.0.0",
                                             "productVersion":  "1.0.0+1defca8e2acf440c973d5ebd3f13caf7b80edda0"
@@ -64,32 +34,12 @@
                                             "productVersion":  null
                                         },
                                         {
-                                            "path":  "Windows/examples/Python/library/x64/ADCClassLibrary.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0+1defca8e2acf440c973d5ebd3f13caf7b80edda0"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/Python/library/x64/ADCManagedTestTypes.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0+0e27f6dccf5ec6be203841135d7514e861fb195a"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/Python/library/x64/AdvHandler.dll",
+                                            "path":  "Windows/examples/Python/advantech_adc/library/x64/AdvHandler.dll",
                                             "fileVersion":  null,
                                             "productVersion":  null
                                         },
                                         {
-                                            "path":  "Windows/examples/Python/library/x86/ADCClassLibrary.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0+1defca8e2acf440c973d5ebd3f13caf7b80edda0"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/Python/library/x86/ADCManagedTestTypes.dll",
-                                            "fileVersion":  "1.0.0.0",
-                                            "productVersion":  "1.0.0+0e27f6dccf5ec6be203841135d7514e861fb195a"
-                                        },
-                                        {
-                                            "path":  "Windows/examples/Python/library/x86/AdvHandler.dll",
+                                            "path":  "Windows/examples/Python/advantech_adc/library/x86/AdvHandler.dll",
                                             "fileVersion":  null,
                                             "productVersion":  null
                                         }
@@ -122,6 +72,10 @@
                           "sha256":  "5921382ecbdb6ad8f42c40d5f6b5031a1ef1d91fa674c991c7f77173e6613c7b"
                       }
                   ],
+    "python":  {
+                   "source":  "Codesys_Windows/Utility/Advantech_Codesys_Agent/ADC_Source/ADCLibrary/ADCPython",
+                   "commit":  "72b00c1043bffbbab7405c2c9eef40e5753bbca7"
+               },
     "linuxValidation":  {
                             "x86":  {
                                         "publicApis":  31,
@@ -239,7 +193,13 @@
                                                           "ADC_WriteSymbolValueSync"
                                                       ],
                                           "exampleLink":  "passed"
-                                      }
+                                      },
+                            "python":  {
+                                           "source":  "Windows ADCLibrary/ADCPython",
+                                           "syntax":  "passed",
+                                           "x64BindingsAndVersion":  "passed",
+                                           "plcCommunication":  "not-run"
+                                       }
                         },
     "files":  [
                   {
@@ -249,6 +209,14 @@
                   {
                       "path":  ".gitignore",
                       "sha256":  "58a5e56f4c22f37071ecfa0ed4391596abd9f47b2ca57db5d8b28f809bfb9284"
+                  },
+                  {
+                      "path":  "Codesys_Project/example.project",
+                      "sha256":  "25967c9d39664b88bb26b9c523f2d95f513c75b79e44dc0575d4be796fe3ee91"
+                  },
+                  {
+                      "path":  "Codesys_Project/example_linux.project",
+                      "sha256":  "c0deef251d7504de5c76838e3e5d4e7b57b7842ea3f746024ad7dbf6c2de91f4"
                   },
                   {
                       "path":  "docs/AdvantechDataConnectClassLibrary.pdf",
@@ -267,10 +235,6 @@
                       "sha256":  "e45806f1312807594e7bd1f6b4d447fda955c4146474fc04d542b66ca5f06d3e"
                   },
                   {
-                      "path":  "Linux/examples/CPlusPlus/example_linux.project",
-                      "sha256":  "c0deef251d7504de5c76838e3e5d4e7b57b7842ea3f746024ad7dbf6c2de91f4"
-                  },
-                  {
                       "path":  "Linux/examples/CPlusPlus/Example1.cpp",
                       "sha256":  "070e8dab75cd0ee2ef0868f25a5cfd83853eb018cb1238e3efc41bd26d84fa30"
                   },
@@ -287,112 +251,100 @@
                       "sha256":  "1d34ee92eb7db47b848e7878858366c3167fd80f0ca4548dfc9388ff4a04f45f"
                   },
                   {
-                      "path":  "Linux/examples/CPlusPlus/libADCLibrary-arm64.so",
-                      "sha256":  "d084b89540a894ea09b8481621569c4ada7c03a3196f3b867e8aec7324782a90"
-                  },
-                  {
-                      "path":  "Linux/examples/CPlusPlus/libADCLibrary-x64.so",
-                      "sha256":  "2dcf8cd9eda930079817f3de5428f690a2f40f0f7148f98a905dccd42825a984"
-                  },
-                  {
-                      "path":  "Linux/examples/CPlusPlus/libADCLibrary-x86.so",
-                      "sha256":  "30bbeac8025a7a6c83607ba52dedb933073b93e2a3b0a5f9578e74ff6ce067d8"
-                  },
-                  {
-                      "path":  "Linux/examples/CPlusPlus/libCmpPLCHandler-arm64.so",
-                      "sha256":  "dab36ac192df8b89394d0691a7d2fced712d00ec3cdb21d5145a10c0f259c001"
-                  },
-                  {
-                      "path":  "Linux/examples/CPlusPlus/libCmpPLCHandler-x64.so",
-                      "sha256":  "f96d57a627446dee557f50c7206876d99ff4ffd3b7e1dad986f536c3787fa040"
-                  },
-                  {
-                      "path":  "Linux/examples/CPlusPlus/libCmpPLCHandler-x86.so",
-                      "sha256":  "171cbc17a775b3f43c9a146b12919e8896856476ff10e66efba6a1f763868a85"
-                  },
-                  {
                       "path":  "Linux/examples/CPlusPlus/Makefile",
-                      "sha256":  "72969ce360f0d3be295e3161fe55b49ccfdb355a59d31113b7ac88885112bfa9"
+                      "sha256":  "191fd04317f2ad8fd5372939516b6db449d45262ee62a142faba984146149f90"
                   },
                   {
-                      "path":  "Linux/examples/Python/.gitignore",
-                      "sha256":  "6252093f8103b25bf77e3171bfc9952ba9c964480ae8f326dc9c4bb12e6aea28"
+                      "path":  "Linux/examples/Python/advantech_adc/__init__.py",
+                      "sha256":  "9e042c3eee4096b2ed6905e41f9053488ca8f51c500c81487d2bbf966234b1e5"
                   },
                   {
-                      "path":  "Linux/examples/Python/adc_api.py",
-                      "sha256":  "85b5d33401b1d54d22465a71fbbff634a21376bca45d1a2aa22f82b52dd2e4b8"
+                      "path":  "Linux/examples/Python/advantech_adc/_version.py",
+                      "sha256":  "f4130dc288c2acba0f98a7f375d5cfd9749e7da03bbcf9ba3532d11e6f361901"
                   },
                   {
-                      "path":  "Linux/examples/Python/adc_tester.py",
-                      "sha256":  "ddcf297f55c0d30f2eb7666ba795fffa85d53d132989943e0fd065c577a736fe"
+                      "path":  "Linux/examples/Python/advantech_adc/ADCAPI.py",
+                      "sha256":  "799775b5e9aff890b032e86ad538f56d60fa97828befd6128dea89bb3b095bbd"
                   },
                   {
-                      "path":  "Linux/examples/Python/CODESYS/adc_optimize.project",
-                      "sha256":  "8c743c7e0c9eee295d2ab67e17fc502ab296cb4f39b65f1bb50dbf32ca1b10a8"
+                      "path":  "Linux/examples/Python/advantech_adc/ADCDef.py",
+                      "sha256":  "b66a27803e8965aa39c555ca2240a937c5fc44baeefda86324cb02ca5a02d14a"
                   },
                   {
-                      "path":  "Linux/examples/Python/CODESYS/PLC_PRG.st",
-                      "sha256":  "5f0bbdf1db6084ed50f319e6902ba075da042a6ead6ecadf64f3eb9c073e7de9"
+                      "path":  "Linux/examples/Python/advantech_adc/ADCType.py",
+                      "sha256":  "5a1473f264df1335dd05652f378db013647a949f69b10d51784bab25939d6ff6"
                   },
                   {
-                      "path":  "Linux/examples/Python/config.py",
-                      "sha256":  "60cf472f02aa78b167b26e91b7d78ef87a9561ab6af3d3f33b75b1f22f7eef09"
+                      "path":  "Linux/examples/Python/API_GUIDE.md",
+                      "sha256":  "2d506bcfc0ed633b508db6d1b8b49e97687f1e120a682d4007b0cabb2622d564"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/__init__.py",
+                      "sha256":  "7f1910788c9ed30e4739bd25a23d2748c59922cc5a0b336558832408a25349ed"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/_common.py",
+                      "sha256":  "d10d60e99f2a521bb71993cdecc99dfbb1a034a400734700b5ebb1a3a340c090"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/Example1_async.py",
+                      "sha256":  "a257fc853afbc7573c3703f6a7a9d4b237fc23f15fc6f66bb98d36fa189994e0"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/Example2_local.py",
+                      "sha256":  "3e52c59fbe28cc68c9a8d8bea806dddbf4a531e679a974e5a05acabb3a2ce1fb"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/Example3_sync.py",
+                      "sha256":  "aeadf44aab40de56392dd132d2435aa9002be8bf235c14bbea8142ad69bbed36"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/examples/Example4_sync_struct.py",
+                      "sha256":  "092f0e43dc1bc884cd4d9bb72ce0074f1bd03c6775482b06f19914e7ab019fa2"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/LICENSE",
+                      "sha256":  "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/NOTICE",
+                      "sha256":  "ee21d38eb7081d28ae00d6acd520698d768b6fdfa181fd6a58e5bb7f4d201fb5"
                   },
                   {
                       "path":  "Linux/examples/Python/README.md",
-                      "sha256":  "fff21bf3eb5fe66ad3f7569f7db484a6479ba051f7a18a5bc26c5057989fa51f"
+                      "sha256":  "15b486e09ca91a8a5610c8d5999e3ad4d311de62364bb1c1ebe7cbf4ae48da42"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_async.py",
-                      "sha256":  "35fd01562976a4ef31798450d9a6c728eaaf8de7608c27472f41ea633a306ffb"
+                      "path":  "Linux/library/arm64/libADCLibrary-arm64.so",
+                      "sha256":  "d084b89540a894ea09b8481621569c4ada7c03a3196f3b867e8aec7324782a90"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_common.py",
-                      "sha256":  "193f04dfe56a90899084dc05014190c304dc54e8a065cc58f362cbd55caf8a64"
+                      "path":  "Linux/library/arm64/libCmpPLCHandler-arm64.so",
+                      "sha256":  "dab36ac192df8b89394d0691a7d2fced712d00ec3cdb21d5145a10c0f259c001"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_data.py",
-                      "sha256":  "386d68a39d73c27b941b475c4047aaa3c5e70f9ad43392328b7d3f391a9e6a40"
+                      "path":  "Linux/library/x64/libADCLibrary-x64.so",
+                      "sha256":  "2dcf8cd9eda930079817f3de5428f690a2f40f0f7148f98a905dccd42825a984"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_local.py",
-                      "sha256":  "245b499af4273fe077e5f88741f5eb69eb342baeecfdc695d6dc7d5d0d907337"
+                      "path":  "Linux/library/x64/libCmpPLCHandler-x64.so",
+                      "sha256":  "f96d57a627446dee557f50c7206876d99ff4ffd3b7e1dad986f536c3787fa040"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_mem_port.py",
-                      "sha256":  "fabe7c08515c8f7e78369bb763079f7700aff4f78116aaf2fe4373aed22a292a"
+                      "path":  "Linux/library/x86/libADCLibrary-x86.so",
+                      "sha256":  "30bbeac8025a7a6c83607ba52dedb933073b93e2a3b0a5f9578e74ff6ce067d8"
                   },
                   {
-                      "path":  "Linux/examples/Python/test_mixed_plc.py",
-                      "sha256":  "02c07089535a86b66ceaeb3fb0998747a188f8b071f14b6c5fb89486577052e7"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/test_other.py",
-                      "sha256":  "ed914ebd0d719e79d308a132b02147befa733fcb000831d85e2200c7dfb511f0"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/test_symbol_list.py",
-                      "sha256":  "702e957a43c7b80a28dec319be5a01b824f4f00e298f19f9f3cf459feb2032ef"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/test_sync.py",
-                      "sha256":  "6d2488dbccba9aeb7f84f32cd23ca1cef8ce068d6ce80c41aad474ce7b11a0d4"
+                      "path":  "Linux/library/x86/libCmpPLCHandler-x86.so",
+                      "sha256":  "171cbc17a775b3f43c9a146b12919e8896856476ff10e66efba6a1f763868a85"
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "56f5540d89d3e6e04643860614d948679f068b5b4b2cfd5a4a63202c6eca0ea6"
-                  },
-                  {
-                      "path":  "Windows/examples/CPlusPlus/example.project",
-                      "sha256":  "25967c9d39664b88bb26b9c523f2d95f513c75b79e44dc0575d4be796fe3ee91"
+                      "sha256":  "c5173d99ceea7c5b1f769cc61f3af3f666a2532565d386d7429e3646fb754b67"
                   },
                   {
                       "path":  "Windows/examples/CPlusPlus/Example.sln",
                       "sha256":  "9f38f64db875a2c6b70865a157a246691416b47efc49648a9a0a0b76b7da83ca"
-                  },
-                  {
-                      "path":  "Windows/examples/CPlusPlus/example_linux.project",
-                      "sha256":  "c0deef251d7504de5c76838e3e5d4e7b57b7842ea3f746024ad7dbf6c2de91f4"
                   },
                   {
                       "path":  "Windows/examples/CPlusPlus/Example1/ADC.h",
@@ -539,100 +491,8 @@
                       "sha256":  "af52aae31a3006056e78cc8e069c5150836742dc1a352f971090f6e57b679aed"
                   },
                   {
-                      "path":  "Windows/examples/CSharp/Debug/ADCClassLibrary.dll",
-                      "sha256":  "f961c0c1557a476dc7caa65bd32e6af8a793523346ef822c0a5ba425ccbeac73"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Debug/ADCClassLibrary.XML",
-                      "sha256":  "0dde69f3e34a5ceffa4deda1c53c0fcb95427c5a8e483e4bc54076440116927c"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Debug/AdvHandler.dll",
-                      "sha256":  "a3d25a56bbbaac250373d39686c5f2baead24fcb7df0f6c4ca4124740280c611"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/example.project",
-                      "sha256":  "25967c9d39664b88bb26b9c523f2d95f513c75b79e44dc0575d4be796fe3ee91"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example.sln",
-                      "sha256":  "b43ebffab0f08b901adc928cd871517ae9e22cd85890b288d5bee35ab1028fac"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example1/Example1.cs",
-                      "sha256":  "bbad2dbd52d8c02c977fe8ac378c8e5fe9f1d4560be6beea1708f5cc9737e505"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example1/Example1.csproj",
-                      "sha256":  "d19ec9a0128a42af9c4c020064adb9a314f9f3a56c1b004560da01c1bdc5c17f"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example1/Properties/AssemblyInfo.cs",
-                      "sha256":  "2676e62cf7350485b271c9f377e6a1daad1e1b97132eabde5c51e452bbef1007"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example2/ADCSym.cs",
-                      "sha256":  "93757feda9cf2853ac0a5f2fb33aec14296482603403f22b2b9ddc31abad248b"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example2/Example2.cs",
-                      "sha256":  "35a2b3f71ad366ae17e13ba1ce233abd26b9e7f6fa55bf0f2cfc079c2a2257c1"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example2/Example2.csproj",
-                      "sha256":  "b227e0e809c2f3d9f6e61549c574f029e0963ea2126d35267c642e61ba758a47"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example2/Properties/AssemblyInfo.cs",
-                      "sha256":  "e2deccb98830858410f7bb57432184cbba477fe595a1744b586e9e1674078506"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example3/Example3.cs",
-                      "sha256":  "1e33c6b025c3061ea6c1ba95986f25098223763ccb5d43e465c1111556703673"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example3/Example3.csproj",
-                      "sha256":  "f26954c007db2901dcad9e2addcd94a4a9f863f3fc78a35cb2dd7f1610aa6231"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Example3/Properties/AssemblyInfo.cs",
-                      "sha256":  "41d90f9160eaa6a2731bc1802c32a032c040569e1c9a9e442e14de19ae62db4f"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/library/ADCClassLibrary.dll",
-                      "sha256":  "f961c0c1557a476dc7caa65bd32e6af8a793523346ef822c0a5ba425ccbeac73"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/library/ADCClassLibrary.XML",
-                      "sha256":  "0dde69f3e34a5ceffa4deda1c53c0fcb95427c5a8e483e4bc54076440116927c"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/library/AdvHandler.dll",
-                      "sha256":  "a3d25a56bbbaac250373d39686c5f2baead24fcb7df0f6c4ca4124740280c611"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Release/ADCClassLibrary.dll",
-                      "sha256":  "f961c0c1557a476dc7caa65bd32e6af8a793523346ef822c0a5ba425ccbeac73"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Release/ADCClassLibrary.XML",
-                      "sha256":  "0dde69f3e34a5ceffa4deda1c53c0fcb95427c5a8e483e4bc54076440116927c"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp/Release/AdvHandler.dll",
-                      "sha256":  "a3d25a56bbbaac250373d39686c5f2baead24fcb7df0f6c4ca4124740280c611"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp_net8/example.project",
-                      "sha256":  "25967c9d39664b88bb26b9c523f2d95f513c75b79e44dc0575d4be796fe3ee91"
-                  },
-                  {
                       "path":  "Windows/examples/CSharp_net8/Example.slnx",
                       "sha256":  "f6aead89ec792a39882ab6d1c33958e1b5dae4022ea4bc95d8b666b9b3c64383"
-                  },
-                  {
-                      "path":  "Windows/examples/CSharp_net8/example_linux.project",
-                      "sha256":  "c0deef251d7504de5c76838e3e5d4e7b57b7842ea3f746024ad7dbf6c2de91f4"
                   },
                   {
                       "path":  "Windows/examples/CSharp_net8/Example1/Example1.cs",
@@ -711,120 +571,72 @@
                       "sha256":  "56ba5ffde5eca0cff112b781650ec6338937cf0cfd9d2adb98e8f51f07726388"
                   },
                   {
-                      "path":  "Windows/examples/Python/ADC.NET8.runtimeconfig.json",
-                      "sha256":  "e68bbc62d8df743a881aff2bb99ab4ea548204480dc30214f7b57714434cd810"
+                      "path":  "Windows/examples/Python/advantech_adc/__init__.py",
+                      "sha256":  "9e042c3eee4096b2ed6905e41f9053488ca8f51c500c81487d2bbf966234b1e5"
                   },
                   {
-                      "path":  "Windows/examples/Python/adc_api.py",
-                      "sha256":  "45ae3f27b356f6fc64d27b7dda27a69136923668c733dd00b47d882b817787cb"
+                      "path":  "Windows/examples/Python/advantech_adc/_version.py",
+                      "sha256":  "f4130dc288c2acba0f98a7f375d5cfd9749e7da03bbcf9ba3532d11e6f361901"
                   },
                   {
-                      "path":  "Windows/examples/Python/adc_net8.py",
-                      "sha256":  "85b4748c74e69c2fec2a54051dc2044c91446f30f5186cdf37d66e35c999ecf3"
+                      "path":  "Windows/examples/Python/advantech_adc/ADCAPI.py",
+                      "sha256":  "799775b5e9aff890b032e86ad538f56d60fa97828befd6128dea89bb3b095bbd"
                   },
                   {
-                      "path":  "Windows/examples/Python/adc_net8_tester.py",
-                      "sha256":  "993ed9490b7275c3e5c9d1e5916971908c54ac91958316e9855a0ea720122e6a"
+                      "path":  "Windows/examples/Python/advantech_adc/ADCDef.py",
+                      "sha256":  "b66a27803e8965aa39c555ca2240a937c5fc44baeefda86324cb02ca5a02d14a"
                   },
                   {
-                      "path":  "Windows/examples/Python/adc_tester.py",
-                      "sha256":  "813b4d1f98e8975af258956e3756ec73c69d36d87eb889f86dbb2bd4301d9166"
+                      "path":  "Windows/examples/Python/advantech_adc/ADCType.py",
+                      "sha256":  "5a1473f264df1335dd05652f378db013647a949f69b10d51784bab25939d6ff6"
                   },
                   {
-                      "path":  "Windows/examples/Python/CODESYS/adc_optimize.project",
-                      "sha256":  "5596988fd4cbeb12c160f0f226159d472f9300b6359869b4527b07a84958d89a"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/CODESYS/PLC_PRG.st",
-                      "sha256":  "5f0bbdf1db6084ed50f319e6902ba075da042a6ead6ecadf64f3eb9c073e7de9"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/config.py",
-                      "sha256":  "a5b58486d59b32b21016a3aaf4749f99dbacc098103b735caae9904d1795a333"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x64/ADCClassLibrary.dll",
-                      "sha256":  "3496d635e645c40a40b762dd19ab34811a13887b27d2278d6661e314d40e9ff6"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x64/ADCClassLibrary.xml",
-                      "sha256":  "876ef3394171146df29d05b6e7398127688e800732f66c98588635555dcc707e"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x64/ADCManagedTestTypes.dll",
-                      "sha256":  "c79a5a12c512fb04e2457a9e7fea774f7af3a6310b40c265873168a7e11e3547"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x64/AdvHandler.dll",
+                      "path":  "Windows/examples/Python/advantech_adc/library/x64/AdvHandler.dll",
                       "sha256":  "1be637ab90ffe5041dfe44cb04596944ea6a94ef39af52f6aa269477fcb8aced"
                   },
                   {
-                      "path":  "Windows/examples/Python/library/x86/ADCClassLibrary.dll",
-                      "sha256":  "6d55d9b041adab3af839cd95f54497a1a2cd6541f34af4eb237da2c5225ab614"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x86/ADCClassLibrary.xml",
-                      "sha256":  "876ef3394171146df29d05b6e7398127688e800732f66c98588635555dcc707e"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x86/ADCManagedTestTypes.dll",
-                      "sha256":  "c79a5a12c512fb04e2457a9e7fea774f7af3a6310b40c265873168a7e11e3547"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/library/x86/AdvHandler.dll",
+                      "path":  "Windows/examples/Python/advantech_adc/library/x86/AdvHandler.dll",
                       "sha256":  "56ba5ffde5eca0cff112b781650ec6338937cf0cfd9d2adb98e8f51f07726388"
                   },
                   {
-                      "path":  "Windows/examples/Python/ManagedTestTypes/.gitignore",
-                      "sha256":  "79914b5e84e1a58b12d9e874ea343e2d131dcdaaf0a3bacf01210219fc679d13"
+                      "path":  "Windows/examples/Python/API_GUIDE.md",
+                      "sha256":  "2d506bcfc0ed633b508db6d1b8b49e97687f1e120a682d4007b0cabb2622d564"
                   },
                   {
-                      "path":  "Windows/examples/Python/ManagedTestTypes/ADC_TEST_MARSHAL_STRUCT.cs",
-                      "sha256":  "a206f082e331a75b426550c4943a9fe336ec2e3a87fea341c48df40bd37ab861"
+                      "path":  "Windows/examples/Python/examples/__init__.py",
+                      "sha256":  "7f1910788c9ed30e4739bd25a23d2748c59922cc5a0b336558832408a25349ed"
                   },
                   {
-                      "path":  "Windows/examples/Python/ManagedTestTypes/ADCManagedTestTypes.csproj",
-                      "sha256":  "ea8e252c5af37fc2fb3e596a4cefd197a5ec65ebc97e0687104e281c85aad5bf"
+                      "path":  "Windows/examples/Python/examples/_common.py",
+                      "sha256":  "d10d60e99f2a521bb71993cdecc99dfbb1a034a400734700b5ebb1a3a340c090"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/examples/Example1_async.py",
+                      "sha256":  "a257fc853afbc7573c3703f6a7a9d4b237fc23f15fc6f66bb98d36fa189994e0"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/examples/Example2_local.py",
+                      "sha256":  "3e52c59fbe28cc68c9a8d8bea806dddbf4a531e679a974e5a05acabb3a2ce1fb"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/examples/Example3_sync.py",
+                      "sha256":  "aeadf44aab40de56392dd132d2435aa9002be8bf235c14bbea8142ad69bbed36"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/examples/Example4_sync_struct.py",
+                      "sha256":  "092f0e43dc1bc884cd4d9bb72ce0074f1bd03c6775482b06f19914e7ab019fa2"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/LICENSE",
+                      "sha256":  "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+                  },
+                  {
+                      "path":  "Windows/examples/Python/NOTICE",
+                      "sha256":  "ee21d38eb7081d28ae00d6acd520698d768b6fdfa181fd6a58e5bb7f4d201fb5"
                   },
                   {
                       "path":  "Windows/examples/Python/README.md",
-                      "sha256":  "0ce7e1eface45205caf0c84edc59fb1345bc1fa9a0cc06dff5802d85f8bd8bbd"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_async.py",
-                      "sha256":  "35fd01562976a4ef31798450d9a6c728eaaf8de7608c27472f41ea633a306ffb"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_common.py",
-                      "sha256":  "193f04dfe56a90899084dc05014190c304dc54e8a065cc58f362cbd55caf8a64"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_data.py",
-                      "sha256":  "386d68a39d73c27b941b475c4047aaa3c5e70f9ad43392328b7d3f391a9e6a40"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_local.py",
-                      "sha256":  "9afe6de361625f3fab8fa356a5ff204a540cc7b58ce867f17ae5dd8e5343b1b9"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_mem_port.py",
-                      "sha256":  "fabe7c08515c8f7e78369bb763079f7700aff4f78116aaf2fe4373aed22a292a"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_mixed_plc.py",
-                      "sha256":  "02c07089535a86b66ceaeb3fb0998747a188f8b071f14b6c5fb89486577052e7"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_other.py",
-                      "sha256":  "ed914ebd0d719e79d308a132b02147befa733fcb000831d85e2200c7dfb511f0"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_symbol_list.py",
-                      "sha256":  "392e9d03551ba7956ab8a33ee4377d04aeaa0124b49634ad9d643e1797d8c9f5"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/test_sync.py",
-                      "sha256":  "6d2488dbccba9aeb7f84f32cd23ca1cef8ce068d6ce80c41aad474ce7b11a0d4"
+                      "sha256":  "15b486e09ca91a8a5610c8d5999e3ad4d311de62364bb1c1ebe7cbf4ae48da42"
                   }
               ]
 }

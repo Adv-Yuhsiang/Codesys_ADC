@@ -64,8 +64,8 @@ APP2_OBJ := $(OBJDIR)/Example2.o
 APP3_OBJ := $(OBJDIR)/Example3.o
 APP4_OBJ := $(OBJDIR)/Example4.o
 
-# ADC Library and headers are expected in the current directory.
-LIB_DIR := .
+# Headers are local; shared libraries are in ../../library/$(CPU).
+LIB_DIR := ../../library/$(CPU)
 THIRDPARTY_DIR := $(LIB_DIR)
 
 # CROSS_COMPILE is empty for native builds.
@@ -121,7 +121,7 @@ CXXFLAGS := -O2 -Wall $(CXXFLAGS_ARCH)
 # ------------------------------------------------------------
 LDFLAGS := $(LDFLAGS_ARCH) \
            -L$(LIB_DIR) \
-           -Wl,-rpath,'$$ORIGIN' \
+           -Wl,-rpath,'$$ORIGIN/../../library/$(CPU)' \
            -Wl,-rpath-link,'$(THIRDPARTY_DIR)'
 
 LDLIBS := -lADCLibrary-$(CPU) -lpthread -ldl -lrt
