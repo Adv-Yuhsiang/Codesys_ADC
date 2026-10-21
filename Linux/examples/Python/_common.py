@@ -4,8 +4,8 @@ import os
 from pathlib import Path
 import sys
 
-# Support both `python Example1_async.py` and `python -m examples...`.
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+# Support both `python Example1_async.py` and `python -m Example1_async`.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from advantech_adc import ErrorCode
 
 

@@ -64,8 +64,18 @@ APP2_OBJ := $(OBJDIR)/Example2.o
 APP3_OBJ := $(OBJDIR)/Example3.o
 APP4_OBJ := $(OBJDIR)/Example4.o
 
-# Headers are local; shared libraries are in ../../library/$(CPU).
-LIB_DIR := ../../library/$(CPU)
+# Headers are local; prefer the installed library pair, otherwise use the relative distribution.
+# Prefer a complete installed pair; avoid mixing different installations/versions.
+# SYSTEM_LIB_DIR may be overridden for a sysroot or an isolated build test.
+SYSTEM_LIB_DIR ?= /usr/lib
+RELATIVE_LIB_DIR := ../../library/$(CPU)
+ifneq ($(and $(wildcard $(SYSTEM_LIB_DIR)/libADCLibrary-$(CPU).so),$(wildcard $(SYSTEM_LIB_DIR)/libCmpPLCHandler-$(CPU).so)),)
+  LIB_DIR := $(SYSTEM_LIB_DIR)
+  LIB_RUNTIME_PATH := $(SYSTEM_LIB_DIR):$$ORIGIN/../../library/$(CPU)
+else
+  LIB_DIR := $(RELATIVE_LIB_DIR)
+  LIB_RUNTIME_PATH := $$ORIGIN/../../library/$(CPU)
+endif
 THIRDPARTY_DIR := $(LIB_DIR)
 
 # CROSS_COMPILE is empty for native builds.
@@ -121,7 +131,7 @@ CXXFLAGS := -O2 -Wall $(CXXFLAGS_ARCH)
 # ------------------------------------------------------------
 LDFLAGS := $(LDFLAGS_ARCH) \
            -L$(LIB_DIR) \
-           -Wl,-rpath,'$$ORIGIN/../../library/$(CPU)' \
+           -Wl,-rpath,'$(LIB_RUNTIME_PATH)' \
            -Wl,-rpath-link,'$(THIRDPARTY_DIR)'
 
 LDLIBS := -lADCLibrary-$(CPU) -lpthread -ldl -lrt
@@ -135,6 +145,7 @@ info:
 	@echo "Target CPU        : $(CPU)"
 	@echo "C++ compiler      : $(CXX)"
 	@echo "ADC Library       : libADCLibrary-$(CPU).so"
+	@echo "Library directory : $(LIB_DIR)"
 
 $(OBJDIR):
 	@mkdir -p $@

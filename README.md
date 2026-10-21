@@ -13,13 +13,19 @@ Windows/examples/
   CPlusPlus/
   CSharp_net8/
   Python/
-    examples/
+    Example1_async.py
+    Example2_local.py
+    Example3_sync.py
+    Example4_sync_struct.py
     advantech_adc/library/{x86,x64}/
 Linux/
   examples/
     CPlusPlus/
     Python/
-      examples/
+      Example1_async.py
+      Example2_local.py
+      Example3_sync.py
+      Example4_sync_struct.py
       advantech_adc/
   library/
     x86/
@@ -27,16 +33,16 @@ Linux/
     arm64/
 ```
 
-Windows provides C++, .NET 8 C# and Python examples. Both platforms' Python examples, helper files and runtime modules come from `ADCLibrary/ADCPython` in the Windows ADC source. Keep each Python directory's `examples/` and `advantech_adc/` directories together. Python 3.7 or later is required; the local runtime uses the standard library and does not require installation from PyPI. See each Python directory's README and `API_GUIDE.md`.
+Windows provides C++, .NET 8 C# and Python examples. Both platforms' Python examples, helper files and runtime modules come from `ADCLibrary/ADCPython` in the Windows ADC source. Keep the four example scripts, `_common.py` and `advantech_adc/` together directly in each `examples/Python/` directory. Python 3.7 or later is required; the local runtime uses the standard library and does not require installation from PyPI.
 
-`sync-manifest.json` records source commits, independent native-library versions, Python source location, selected document versions and SHA256 checksums. Configure the examples for your target PLC before running them.
+`sync-manifest.json` is a release inventory: the publication script verifies its source commits, versions, file list and SHA256 checksums before upload. It supports release traceability and is not read by the example programs. Configure the examples for your target PLC before running them.
 
 ## Windows
 
 Open the C++ or .NET 8 solution/project in its example directory. Keep the native/import libraries in place. Python uses the matching DLL in `advantech_adc/library/{x86,x64}/` according to the Python process architecture. Run Python examples from `Windows/examples/Python`, for example:
 
 ```sh
-python examples/Example1_async.py
+python Example1_async.py
 ```
 
 ## Shared Linux libraries
@@ -48,7 +54,7 @@ libADCLibrary-<platform>.so
 libCmpPLCHandler-<platform>.so
 ```
 
-Available platforms are x86, x64 and arm64. Keep the matching pair together. The C++ Makefile uses `../../library/$(CPU)` and a relative runtime search path:
+Available platforms are x86, x64 and arm64. Keep the matching pair together. The C++ Makefile first checks `/usr/lib` for both matching libraries. If the installed pair is absent or incomplete, it uses `../../library/$(CPU)`. The runtime search path follows the selected location. `make info CPU=x64` shows the chosen directory. Cross builds can override `SYSTEM_LIB_DIR` with their target sysroot's library directory.
 
 ```sh
 cd Linux/examples/CPlusPlus
@@ -62,7 +68,7 @@ sudo install -m 0644 Linux/library/x64/libADCLibrary-x64.so /usr/lib/
 sudo install -m 0644 Linux/library/x64/libCmpPLCHandler-x64.so /usr/lib/
 sudo ldconfig
 cd Linux/examples/Python
-python3 examples/Example1_async.py
+python3 Example1_async.py
 ```
 
 The Python runtime currently selects x86/x64; ARM64 libraries are also provided for native clients. Library compilation, architecture/API checks, C++ linking with the distributed directory layout and Linux x64 Python binding/version checks are validated. PLC communication and ARM64 runtime execution require separate device testing. Linux native libraries retain the upstream `-O0 -g` settings.

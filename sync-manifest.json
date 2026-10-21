@@ -114,7 +114,12 @@
                                                         "ADC_WriteSymbolValue",
                                                         "ADC_WriteSymbolValueSync"
                                                     ],
-                                        "exampleLink":  "passed"
+                                        "exampleLink":  "passed",
+                                        "librarySearch":  {
+                                                              "systemFirstLink":  "passed",
+                                                              "relativeFallbackLink":  "passed",
+                                                              "incompleteSystemPairFallbackSelection":  "passed"
+                                                          }
                                     },
                             "x64":  {
                                         "publicApis":  31,
@@ -153,7 +158,12 @@
                                                         "ADC_WriteSymbolValue",
                                                         "ADC_WriteSymbolValueSync"
                                                     ],
-                                        "exampleLink":  "passed"
+                                        "exampleLink":  "passed",
+                                        "librarySearch":  {
+                                                              "systemFirstLink":  "passed",
+                                                              "relativeFallbackLink":  "passed",
+                                                              "incompleteSystemPairFallbackSelection":  "passed"
+                                                          }
                                     },
                             "arm64":  {
                                           "publicApis":  31,
@@ -192,11 +202,17 @@
                                                           "ADC_WriteSymbolValue",
                                                           "ADC_WriteSymbolValueSync"
                                                       ],
-                                          "exampleLink":  "passed"
+                                          "exampleLink":  "passed",
+                                          "librarySearch":  {
+                                                                "systemFirstLink":  "passed",
+                                                                "relativeFallbackLink":  "passed",
+                                                                "incompleteSystemPairFallbackSelection":  "passed"
+                                                            }
                                       },
                             "python":  {
                                            "source":  "Windows ADCLibrary/ADCPython",
                                            "syntax":  "passed",
+                                           "flatExampleHelperImport":  "passed",
                                            "x64BindingsAndVersion":  "passed",
                                            "plcCommunication":  "not-run"
                                        }
@@ -252,7 +268,11 @@
                   },
                   {
                       "path":  "Linux/examples/CPlusPlus/Makefile",
-                      "sha256":  "191fd04317f2ad8fd5372939516b6db449d45262ee62a142faba984146149f90"
+                      "sha256":  "78c63156105ef65a66e033eb03839fc735fb5a2cf8d9771ff4724b1154c5632c"
+                  },
+                  {
+                      "path":  "Linux/examples/Python/_common.py",
+                      "sha256":  "06fa9155afdbae0a4f8901fc1c98e2f2e1e047107ae62e1fc7aba67e9163c868"
                   },
                   {
                       "path":  "Linux/examples/Python/advantech_adc/__init__.py",
@@ -275,44 +295,20 @@
                       "sha256":  "5a1473f264df1335dd05652f378db013647a949f69b10d51784bab25939d6ff6"
                   },
                   {
-                      "path":  "Linux/examples/Python/API_GUIDE.md",
-                      "sha256":  "2d506bcfc0ed633b508db6d1b8b49e97687f1e120a682d4007b0cabb2622d564"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/examples/__init__.py",
-                      "sha256":  "7f1910788c9ed30e4739bd25a23d2748c59922cc5a0b336558832408a25349ed"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/examples/_common.py",
-                      "sha256":  "d10d60e99f2a521bb71993cdecc99dfbb1a034a400734700b5ebb1a3a340c090"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/examples/Example1_async.py",
+                      "path":  "Linux/examples/Python/Example1_async.py",
                       "sha256":  "a257fc853afbc7573c3703f6a7a9d4b237fc23f15fc6f66bb98d36fa189994e0"
                   },
                   {
-                      "path":  "Linux/examples/Python/examples/Example2_local.py",
+                      "path":  "Linux/examples/Python/Example2_local.py",
                       "sha256":  "3e52c59fbe28cc68c9a8d8bea806dddbf4a531e679a974e5a05acabb3a2ce1fb"
                   },
                   {
-                      "path":  "Linux/examples/Python/examples/Example3_sync.py",
+                      "path":  "Linux/examples/Python/Example3_sync.py",
                       "sha256":  "aeadf44aab40de56392dd132d2435aa9002be8bf235c14bbea8142ad69bbed36"
                   },
                   {
-                      "path":  "Linux/examples/Python/examples/Example4_sync_struct.py",
+                      "path":  "Linux/examples/Python/Example4_sync_struct.py",
                       "sha256":  "092f0e43dc1bc884cd4d9bb72ce0074f1bd03c6775482b06f19914e7ab019fa2"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/LICENSE",
-                      "sha256":  "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/NOTICE",
-                      "sha256":  "ee21d38eb7081d28ae00d6acd520698d768b6fdfa181fd6a58e5bb7f4d201fb5"
-                  },
-                  {
-                      "path":  "Linux/examples/Python/README.md",
-                      "sha256":  "15b486e09ca91a8a5610c8d5999e3ad4d311de62364bb1c1ebe7cbf4ae48da42"
                   },
                   {
                       "path":  "Linux/library/arm64/libADCLibrary-arm64.so",
@@ -340,7 +336,7 @@
                   },
                   {
                       "path":  "README.md",
-                      "sha256":  "c5173d99ceea7c5b1f769cc61f3af3f666a2532565d386d7429e3646fb754b67"
+                      "sha256":  "0b3ef524b3c90ca28b1d2c3eb86f679c47dbcaa096d0ab4b4fe1ebef39753672"
                   },
                   {
                       "path":  "Windows/examples/CPlusPlus/Example.sln",
@@ -571,6 +567,10 @@
                       "sha256":  "56ba5ffde5eca0cff112b781650ec6338937cf0cfd9d2adb98e8f51f07726388"
                   },
                   {
+                      "path":  "Windows/examples/Python/_common.py",
+                      "sha256":  "06fa9155afdbae0a4f8901fc1c98e2f2e1e047107ae62e1fc7aba67e9163c868"
+                  },
+                  {
                       "path":  "Windows/examples/Python/advantech_adc/__init__.py",
                       "sha256":  "9e042c3eee4096b2ed6905e41f9053488ca8f51c500c81487d2bbf966234b1e5"
                   },
@@ -599,44 +599,20 @@
                       "sha256":  "56ba5ffde5eca0cff112b781650ec6338937cf0cfd9d2adb98e8f51f07726388"
                   },
                   {
-                      "path":  "Windows/examples/Python/API_GUIDE.md",
-                      "sha256":  "2d506bcfc0ed633b508db6d1b8b49e97687f1e120a682d4007b0cabb2622d564"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/examples/__init__.py",
-                      "sha256":  "7f1910788c9ed30e4739bd25a23d2748c59922cc5a0b336558832408a25349ed"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/examples/_common.py",
-                      "sha256":  "d10d60e99f2a521bb71993cdecc99dfbb1a034a400734700b5ebb1a3a340c090"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/examples/Example1_async.py",
+                      "path":  "Windows/examples/Python/Example1_async.py",
                       "sha256":  "a257fc853afbc7573c3703f6a7a9d4b237fc23f15fc6f66bb98d36fa189994e0"
                   },
                   {
-                      "path":  "Windows/examples/Python/examples/Example2_local.py",
+                      "path":  "Windows/examples/Python/Example2_local.py",
                       "sha256":  "3e52c59fbe28cc68c9a8d8bea806dddbf4a531e679a974e5a05acabb3a2ce1fb"
                   },
                   {
-                      "path":  "Windows/examples/Python/examples/Example3_sync.py",
+                      "path":  "Windows/examples/Python/Example3_sync.py",
                       "sha256":  "aeadf44aab40de56392dd132d2435aa9002be8bf235c14bbea8142ad69bbed36"
                   },
                   {
-                      "path":  "Windows/examples/Python/examples/Example4_sync_struct.py",
+                      "path":  "Windows/examples/Python/Example4_sync_struct.py",
                       "sha256":  "092f0e43dc1bc884cd4d9bb72ce0074f1bd03c6775482b06f19914e7ab019fa2"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/LICENSE",
-                      "sha256":  "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/NOTICE",
-                      "sha256":  "ee21d38eb7081d28ae00d6acd520698d768b6fdfa181fd6a58e5bb7f4d201fb5"
-                  },
-                  {
-                      "path":  "Windows/examples/Python/README.md",
-                      "sha256":  "15b486e09ca91a8a5610c8d5999e3ad4d311de62364bb1c1ebe7cbf4ae48da42"
                   }
               ]
 }
