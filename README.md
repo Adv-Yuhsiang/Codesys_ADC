@@ -14,6 +14,7 @@ Codesys_ADC/
 ├── docs/
 │   ├── AdvantechDataConnectClassLibrary.pdf
 │   ├── AdvantechDataConnectLibrary.pdf
+│   ├── AdvantechDataConnectLibrary(Python).pdf
 │   └── AdvantechDataConnectLibrary(Linux).pdf
 ├── Windows/
 │   └── examples/
